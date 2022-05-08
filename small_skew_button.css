@@ -1,0 +1,48 @@
+:root{
+    --high: #386641;
+    --mid: #6a994e;
+    --low: #a7c957;
+    --background: #f2e8cf;
+    --alert: #bc4749;
+    --border_radius: 5px;
+}
+
+/* From uiverse.io by @CristianMontoya98 */
+.btn {
+    padding: 10px 10px;
+    background: var(--alert);
+    color: var(--background);
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   button:hover {
+    color: var(--background);
+   }
+   
+   button:after {
+    content: "";
+    background: var(--low);
+    position: absolute;
+    z-index: -1;
+    left: -40%;
+    right: -40%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
